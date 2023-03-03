@@ -11,6 +11,10 @@ $custom-gray-light: #7D7D7D;
 
 $body-color: $text-color;
 
+$font-size-xs: $font-size-base * .75;
+
+$font-weight-base: 500;
+
 $theme-colors: map.merge(
     $theme-colors,
     (
@@ -20,7 +24,7 @@ $theme-colors: map.merge(
         "danger": $custom-red,
         "light": $custom-light,
         "dark":  $custom-dark,
-        "extra-light": $extra-light
+        "extra-light": $extra-light,
     )
 );
 
@@ -42,5 +46,11 @@ $spacers: map.merge(
     $spacers,
     (
         6: $spacer * 1.25,
+        7: $spacer * 0.75,
+        8: $spacer * 2,
     )
-)
+);
+
+$breadcrumb-divider: quote(">");
+$breadcrumb-divider-color: #656565;
+$breadcrumb-active-color: #656565;

@@ -1,0 +1,21 @@
+.btn-custom {
+    display: inline-flex;
+    gap: map.get($spacers, 7);
+    align-items: center;
+    padding: map.get($spacers, 2) map.get($spacers, 3);
+
+    color: #fff;
+    font-weight: 400;
+    font-size: $font-size-xs;
+
+    border: none;
+    border-radius: $border-radius;
+
+    &.btn-green {
+        background: $custom-green;
+    }
+
+    &.btn-gray {
+        background: $custom-gray;
+    }
+}

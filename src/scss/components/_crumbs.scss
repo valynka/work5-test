@@ -1,0 +1,9 @@
+.crumbs {
+  font-weight: 500;
+  font-size: $font-size-xs;
+
+  a {
+    color: $breadcrumb-active-color;
+    text-decoration: none;
+  }
+}

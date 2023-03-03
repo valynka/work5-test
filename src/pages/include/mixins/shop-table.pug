@@ -1,0 +1,21 @@
+mixin createShopTable(shopsData = [])
+  table.w-100
+    thead
+      tr
+        th.pe-2.pe-xxl-5 №
+        th.pe-2.pe-xxl-5.ps-2.ps-xxl-3 Название
+        th.pe-2.pe-xxl-5.ps-2.ps-xxl-3 Адрес
+        th.ps-2.ps-xxl-3 Действие
+    tbody
+      each shop in shopsData
+        tr
+          td.pe-2.pe-xxl-5= shop.number
+          td.pe-2.pe-xxl-5.ps-2.ps-xxl-3= shop.title
+          td.pe-2.pe-xxl-5.ps-2.ps-xxl-3= shop.url
+          td.ps-2.ps-xxl-3.d-flex.flex-column.flex-xxl-row.gap-2.justify-content-between
+            include button.pug
+            +button("./images/pencil.svg", "Редактировать", "btn-green")
+            +button("./images/canсel.svg", "Редактировать", "btn-gray")
+      else
+        tr
+          td(colspan='4') Магазины отсутствуют

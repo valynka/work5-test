@@ -1,0 +1,31 @@
+.shop-table {
+  overflow-x: scroll;
+
+  background: #fff;
+
+  border-radius: $border-radius;
+  box-shadow: 0 11px 21px rgb(40 40 40 / 7%);
+
+  @include media-breakpoint-up(sm) { overflow-x: auto; }
+
+  @include media-breakpoint-up(xxl) {
+    width: 90%;
+    
+  }
+
+  tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid $custom-gray;
+    }
+  }
+
+  th {
+    padding-top: map.get($spacers, 4);
+    padding-bottom: map.get($spacers, 1);
+  }
+
+  td {
+    padding-top: map.get($spacers, 6);
+    padding-bottom: map.get($spacers, 6);
+  }
+}

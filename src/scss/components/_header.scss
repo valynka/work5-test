@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  gap: map.get($spacers, 3);
+
+  .message {
+    position: relative;
+
+    width: 61px;
+    height: 61px;
+
+    border: 1px solid #d4d4d4;
+    border-radius: $border-radius;
+
+    .envelope {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      margin: auto;
+    }
+
+    .dot {
+      position: absolute;
+      top: 23%;
+      left: 60%;
+
+      display: none;
+    }
+
+    &.unread {
+      .dot {
+        display: block;
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    gap: map.get($spacers, 3);
+    align-items: center;
+    padding: map.get($spacers, 2) map.get($spacers, 3);
+
+    background: #fff;
+    border-radius: $border-radius;
+    box-shadow: 0 0 16px rgb(136 167 245 / 18%);
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+
+      border: 2px solid #d9d9d9;
+      border-radius: 50%;
+    }
+  }
+}

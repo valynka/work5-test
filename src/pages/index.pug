@@ -1,12 +1,71 @@
 - const title = "shops";
 
+-
+  const shopsData = [
+    { number: 12345, title: "Дипломная работа", url: "http://www.work5.ru/services" },
+    { number: 12345, title: "Дипломная работа", url: "http://www.work5.ru/services" }
+  ];
+
+-
+  const menu = [
+    { img: "./images/home.svg", title: "Главная" },
+    { img: "./images/cart.svg", title: "Мои магазины", active: true },
+    { img: "./images/megaphone.svg", title: "Промоматериалы" },
+    { img: "./images/diagram.svg", title: "Статистика" },
+    { img: "./images/wallet.svg", title: "Баланс" },
+    { img: "./images/avatar.svg", title: "Персональные данные" },
+    { img: "./images/question.svg", title: "FAQ" },
+    { img: "./images/headset.svg", title: "Техподдержка" },
+    { img: "./images/exit.svg", title: "Выход" }
+  ];
+
+include include/mixins/menu.pug
+
 doctype html
 html(lang="ru")
   include include/head.pug
   body.bg-extra-light.small
     .container-xxl
       .row 
-        .col-2.vh-100.pt-4.bg-white
-          img.mt-1(src="./images/logo.svg" alt="work5 logo") 
-          include include/components/menu.pug
-        .col-10
+        .col-3.vh-100.pt-4.bg-white.d-none.d-lg-block
+          a.navbar-brand(href="#")
+            img.mt-1(src="./images/logo.svg", alt="work5 logo")
+          nav
+            +createMenu(menu)
+        .col-12.col-lg-9
+          .row.d-lg-none
+            .col-12.bg-white.ps-3.pe-3 
+              nav.navbar  
+                a.navbar-brand(href="#")
+                  img.mt-1(src="./images/logo.svg", alt="work5 logo")
+                button.navbar-toggler.shadow-none(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
+                  span.navbar-toggler-icon    
+                .collapse.navbar-collapse(id="navbarNavAltMarkup")
+                  .navbar-nav.ps-3
+                    +createMenu(menu)
+          .row.ps-3.ps-xxl-5 
+            .col.d-flex.justify-content-between.flex-column.flex-md-row
+              .pt-3.pt-lg-4.order-2.order-md-1.mb-4.mb-md-0
+                nav.crumbs 
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href="#") Главная
+                    li.breadcrumb-item.active Мои магазины
+              .pt-3.pt-lg-4.pe-3.order-1.order-md-2.header
+                .message.unread
+                  img.envelope(src="./images/envelope.svg", alt="envelope")
+                  img.dot(src="./images/red-circle.svg", alt="red dot")
+                .profile
+                  img.avatar(src="./images/photo.jpg", alt="avatar")
+                  span Максим Добжанский
+          .row.ps-3.ps-xxl-5 
+            .col 
+              include include/mixins/button.pug 
+              +button("./images/plus.svg", "Создать свой магазин", "btn-green")
+          .row.ps-3.ps-xxl-5 
+            .col
+              h1.h5.mt-5.mb-4.text-dark Управление магазинами
+              .shop-table.ps-lg-8.pe-lg-8.ps-2.pe-2
+                include include/mixins/shop-table.pug
+                +createShopTable(shopsData)
+    script(src="js/bootstrap.min.js")
