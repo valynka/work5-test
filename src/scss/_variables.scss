@@ -1,0 +1,46 @@
+$custom-green: #55C97B;
+$custom-purple: #6666CC;
+$custom-red: #E42626;
+$custom-dark: #343434;
+$custom-gray: #b1b1b1;
+$custom-light: #E6E6E9;
+$text-color: #6E6E6E;
+$extra-light: #F8FAFF;
+$custom-gray-light: #7D7D7D;
+
+
+$body-color: $text-color;
+
+$theme-colors: map.merge(
+    $theme-colors,
+    (
+        "primary": $custom-purple,
+        "secondary": $custom-gray,
+        "success": $custom-green,
+        "danger": $custom-red,
+        "light": $custom-light,
+        "dark":  $custom-dark,
+        "extra-light": $extra-light
+    )
+);
+
+$grid-breakpoints: map.merge(
+    $grid-breakpoints,
+    (
+        xxl: 1500px
+    )
+);
+
+$container-max-widths: map.merge(
+    $container-max-widths,
+    (
+        xxl: 1440px
+    )
+);
+
+$spacers: map.merge(
+    $spacers,
+    (
+        6: $spacer * 1.25,
+    )
+)

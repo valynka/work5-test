@@ -1,0 +1,40 @@
+.menu {
+  list-style: none;
+  padding: 0 map.get($spacers, 4);
+  margin-top: map.get($spacers, 4);
+
+  li {
+    
+
+    a {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: $custom-gray-light;
+      padding-top: map.get($spacers, 3);
+      padding-bottom: map.get($spacers, 3);
+      &:hover,
+      &.active {
+        color: $custom-dark;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: (map.get($spacers, 4) + $grid-gutter-width * 0.5) * -1;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: $custom-purple;
+        }
+
+        .icon {
+            filter: invert(61%) sepia(56%) saturate(5872%) hue-rotate(218deg) brightness(83%) contrast(90%);;
+        }
+      }
+
+      .icon {
+        margin-right: map.get($spacers, 6);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+-
+  const menu = [
+    { img: "./images/home.svg", title: "Главная" },
+    { img: "./images/cart.svg", title: "Мои магазины", active: true },
+    { img: "./images/megaphone.svg", title: "Промоматериалы" },
+    { img: "./images/diagram.svg", title: "Статистика" },
+    { img: "./images/wallet.svg", title: "Баланс" },
+    { img: "./images/avatar.svg", title: "Персональные данные" },
+    { img: "./images/question.svg", title: "FAQ" },
+    { img: "./images/headset.svg", title: "Техподдержка" },
+    { img: "./images/exit.svg", title: "Выход" }
+  ];
+
+nav 
+  ul.menu
+    each item in menu 
+      li 
+        if item.active
+          a.active(href="#")
+            img.icon(src= item.img)
+            = item.title
+        else 
+          a(href="#")
+            img.icon(src= item.img)
+            = item.title

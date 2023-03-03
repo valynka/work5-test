@@ -1,7 +1,12 @@
 - const title = "shops";
 
 doctype html
-html(lang='ru')
+html(lang="ru")
   include include/head.pug
-  body
-    
+  body.bg-extra-light.small
+    .container-xxl
+      .row 
+        .col-2.vh-100.pt-4.bg-white
+          img.mt-1(src="./images/logo.svg" alt="work5 logo") 
+          include include/components/menu.pug
+        .col-10
