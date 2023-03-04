@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shops</title>
     <link rel="stylesheet" href="styles/app.css">
+    <script src="./js/popup.js"></script>
   </head>
   <body class="bg-extra-light small">
     <div class="container-xxl">
@@ -33,7 +34,52 @@
             </ul>
           </nav>
         </div>
-        <div class="col-12 col-lg-9">
+        <div class="col-12 col-lg-9 position-relative">
+          <div class="popup">
+            <div class="row"> 
+              <div class="col d-flex justify-content-between">
+                <h1 class="h5 text-dark mb-5">Создать магазин</h1>
+                <button class="btn-cancel" id="close-popup"></button>
+              </div>
+            </div>
+            <form action="">
+              <div class="row flex-column flex-md-row justify-content-between gap-2 gap-md-0"> 
+                <div class="w-auto">
+                  <label class="d-block text-dark mb-1" for="sample">Шаблон</label>
+                  <select class="form-select shadow-none" name="sample" id="sample">
+                    <option value="standard">Стандартный</option>
+                    <option value="test">Тест</option>
+                  </select>
+                </div>
+                <div class="w-auto">
+                  <label class="d-block text-dark mb-1" for="color-scheme">Цветовая схема</label>
+                  <select class="form-select shadow-none" name="color-scheme" id="color-scheme">
+                    <option value="classic">Классическая</option>
+                    <option value="test">Тест</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col mt-8"> 
+                  <label class="d-block text-dark mb-1" for="domen">Домен</label>
+                  <div class="input-group">       
+                    <input class="form-control" type="text" id="domen" placeholder="Например: ivangrozniy" aria-label="Например: ivangrozniy" aria-describedby="basic-addon2"><span class="input-group-text" id="basic-addon2">.work5.ru</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col mt-8 d-flex align-items-center gap-3"> <img src="./images/warning.svg" alt="warning">
+                  <p class="mb-0">В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по ссылке</p>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col mt-5 d-flex gap-2"> 
+                  <button class="btn btn-secondary" type="button">Отмена</button>
+                  <button class="btn btn-success" type="button">Создать</button>
+                </div>
+              </div>
+            </form>
+          </div>
           <div class="row d-lg-none">
             <div class="col-12 bg-white ps-3 pe-3"> 
               <nav class="navbar"> <a class="navbar-brand" href="#"><img class="mt-1" src="./images/logo.svg" alt="work5 logo"></a>
@@ -83,7 +129,7 @@
           </div>
           <div class="row ps-3 ps-xxl-5"> 
             <div class="col"> 
-                            <button class="btn-custom btn-green"><img src="./images/plus.svg"><span>Создать свой магазин</span></button>
+                            <button class="btn-custom btn-green" id="open-popup"><img src="./images/plus.svg"><span>Создать свой магазин</span></button>
             </div>
           </div>
           <div class="row ps-3 ps-xxl-5"> 

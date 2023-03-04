@@ -12,6 +12,7 @@ const browserSyncJob = () => {
   watch("src/scss/**/*.scss", buildSass);
   watch("src/pages/**/*.pug", buildPug);
   watch("src/images/**/*", destImages);
+  watch("src/js/**/*.js", destJs);
 };
 
 const buildSass = () =>
@@ -31,9 +32,22 @@ const destImages = () => {
 };
 
 const destBootstrapJs = () => {
-  return src('node_modules/bootstrap/dist/js/bootstrap.min.js')
-    .pipe(dest('build/js/'));
+  return src("node_modules/bootstrap/dist/js/bootstrap.min.js").pipe(
+    dest("build/js/")
+  );
+};
+
+const destJs = () => {
+  return src("src/js/**/*.js")
+    .pipe(dest("build/js/"))
+    .pipe(browserSync.stream());
 };
 
 exports.server = browserSyncJob;
-exports.build = parallel(buildSass, buildPug, destImages, destBootstrapJs);
+exports.build = parallel(
+  buildSass,
+  buildPug,
+  destImages,
+  destBootstrapJs,
+  destJs
+);

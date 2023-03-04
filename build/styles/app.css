@@ -2291,7 +2291,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: 1px solid #ced4da;
+  border: 1px solid #CDCDCD;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
@@ -2302,7 +2302,7 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
-  border-color: #86b7fe;
+  border-color: #CDCDCD;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
@@ -2637,15 +2637,15 @@ textarea.form-control-lg {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 2rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  background-color: #6666CC;
+  border: 1px solid #6666CC;
   border-radius: 0.375rem;
 }
 
@@ -8671,14 +8671,6 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
-.outline-0 {
-  outline: 0 !important;
-}
-
-.outline-0-focus:focus {
-  outline: 0 !important;
-}
-
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -11941,10 +11933,10 @@ textarea.form-control-lg {
   }
 }
 .menu {
-  list-style: none;
-  padding: 0;
   margin-top: 1.5rem;
+  padding: 0;
   font-weight: 500;
+  list-style: none;
   background: #fff;
 }
 @media (min-width: 1200px) {
@@ -11953,12 +11945,12 @@ textarea.form-control-lg {
   }
 }
 .menu a {
-  display: block;
   position: relative;
-  text-decoration: none;
-  color: #7D7D7D;
+  display: block;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #7D7D7D;
+  text-decoration: none;
 }
 .menu a:hover, .menu a.active {
   color: #343434;
@@ -11968,13 +11960,13 @@ textarea.form-control-lg {
 }
 .menu a.active::before {
   position: absolute;
-  content: "";
-  left: -0.75rem;
   top: 0;
-  height: 100%;
+  left: -0.75rem;
   width: 4px;
+  height: 100%;
   background-color: #6666CC;
-  box-shadow: 0px 2px 10px rgba(102, 102, 204, 0.67);
+  box-shadow: 0 2px 10px rgba(102, 102, 204, 0.67);
+  content: "";
 }
 @media (min-width: 1500px) {
   .menu a.active::before {
@@ -11991,8 +11983,8 @@ textarea.form-control-lg {
 }
 
 .crumbs {
-  font-size: 0.75rem;
   font-weight: 500;
+  font-size: 0.75rem;
 }
 .crumbs a {
   color: #656565;
@@ -12012,17 +12004,17 @@ textarea.form-control-lg {
 }
 .header .message .envelope {
   position: absolute;
-  margin: auto;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  margin: auto;
 }
 .header .message .dot {
-  display: none;
   position: absolute;
   top: 23%;
   left: 60%;
+  display: none;
 }
 .header .message.unread .dot {
   display: block;
@@ -12031,16 +12023,16 @@ textarea.form-control-lg {
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding: 0.5rem 1rem;
   background: #fff;
   border-radius: 0.375rem;
-  box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
-  padding: 0.5rem 1rem;
+  box-shadow: 0 0 16px rgba(136, 167, 245, 0.18);
 }
 .header .profile .avatar {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
   border: 2px solid #d9d9d9;
+  border-radius: 50%;
 }
 
 .btn-custom {
@@ -12049,10 +12041,10 @@ textarea.form-control-lg {
   align-items: center;
   padding: 0.5rem 1rem;
   color: #fff;
-  font-size: 0.75rem;
   font-weight: 400;
-  border-radius: 0.375rem;
+  font-size: 0.75rem;
   border: none;
+  border-radius: 0.375rem;
 }
 .btn-custom.btn-green {
   background: #55C97B;
@@ -12062,10 +12054,10 @@ textarea.form-control-lg {
 }
 
 .shop-table {
+  overflow-x: scroll;
   background: #fff;
   border-radius: 0.375rem;
-  box-shadow: 0px 11px 21px rgba(40, 40, 40, 0.07);
-  overflow-x: scroll;
+  box-shadow: 0 11px 21px rgba(40, 40, 40, 0.07);
 }
 @media (min-width: 576px) {
   .shop-table {
@@ -12087,4 +12079,71 @@ textarea.form-control-lg {
 .shop-table td {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.popup {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 45%;
+  left: 1.75rem;
+  right: 1.75rem;
+  max-width: 38.5rem;
+  padding: 1.5rem 1.25rem 2rem 1.5rem;
+  background: #fff;
+  box-shadow: 0px 30px 38px rgba(37, 37, 37, 0.1);
+  border-radius: 0.375rem;
+}
+@media (min-width: 768px) {
+  .popup {
+    top: 35%;
+  }
+}
+@media (min-width: 992px) {
+  .popup {
+    top: 15%;
+  }
+}
+@media (min-width: 1500px) {
+  .popup {
+    left: 3.75rem;
+  }
+}
+.popup.show {
+  display: block;
+}
+.popup .btn-cancel {
+  border: none;
+  background-image: url("./../images/cancel-circle.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+}
+.popup select,
+.popup input {
+  padding: 0.5rem 1rem;
+  color: #7c7c7c;
+}
+.popup select {
+  font-size: 0.75rem;
+}
+@media (min-width: 576px) {
+  .popup select {
+    width: 15rem;
+  }
+}
+.popup input {
+  font-size: 0.875rem;
+  background: #E6E6E9;
+}
+.popup p {
+  color: #7D7D7D;
+  font-size: 0.75rem;
+}
+.popup .btn {
+  font-size: 0.875rem;
+  color: #fff;
+  border-radius: 3px;
+  width: 10rem;
 }

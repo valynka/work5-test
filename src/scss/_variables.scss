@@ -54,3 +54,10 @@ $spacers: map.merge(
 $breadcrumb-divider: quote(">");
 $breadcrumb-divider-color: #656565;
 $breadcrumb-active-color: #656565;
+
+$form-select-border-color: #CDCDCD;
+$form-select-focus-border-color: #CDCDCD;
+$input-group-addon-bg: $custom-purple;
+$input-group-addon-border-color: $custom-purple;
+$input-group-addon-color: #fff;
+$input-group-addon-padding-x: map.get($spacers, 8);

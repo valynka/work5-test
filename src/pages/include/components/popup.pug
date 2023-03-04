@@ -1,0 +1,31 @@
+.popup
+  .row 
+    .col.d-flex.justify-content-between
+      h1.h5.text-dark.mb-5 Создать магазин
+      button.btn-cancel(id="close-popup")
+  form(action="")
+    .row.flex-column.flex-md-row.justify-content-between.gap-2.gap-md-0 
+      .w-auto
+        label.d-block.text-dark.mb-1(for="sample") Шаблон
+        select.form-select.shadow-none(name="sample", id="sample")
+          option(value="standard") Стандартный
+          option(value="test") Тест
+      .w-auto
+        label.d-block.text-dark.mb-1(for="color-scheme") Цветовая схема
+        select.form-select.shadow-none(name="color-scheme", id="color-scheme")
+          option(value="classic") Классическая
+          option(value="test") Тест
+    .row 
+      .col.mt-8 
+        label.d-block.text-dark.mb-1(for="domen") Домен
+        .input-group        
+          input.form-control(type="text", id="domen", placeholder="Например: ivangrozniy", aria-label="Например: ivangrozniy", aria-describedby="basic-addon2")
+          span.input-group-text(id="basic-addon2") .work5.ru
+    .row 
+      .col.mt-8.d-flex.align-items-center.gap-3 
+        img(src="./images/warning.svg", alt="warning")
+        p.mb-0 В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по ссылке
+    .row 
+      .col.mt-5.d-flex.gap-2 
+        button.btn.btn-secondary(type="button") Отмена
+        button.btn.btn-success(type="button") Создать

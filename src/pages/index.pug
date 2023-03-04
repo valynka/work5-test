@@ -32,7 +32,8 @@ html(lang="ru")
             img.mt-1(src="./images/logo.svg", alt="work5 logo")
           nav
             +createMenu(menu)
-        .col-12.col-lg-9
+        .col-12.col-lg-9.position-relative
+          include include/components/popup.pug
           .row.d-lg-none
             .col-12.bg-white.ps-3.pe-3 
               nav.navbar  
@@ -61,7 +62,7 @@ html(lang="ru")
           .row.ps-3.ps-xxl-5 
             .col 
               include include/mixins/button.pug 
-              +button("./images/plus.svg", "Создать свой магазин", "btn-green")
+              +button("./images/plus.svg", "Создать свой магазин", "btn-green", "open-popup")
           .row.ps-3.ps-xxl-5 
             .col
               h1.h5.mt-5.mb-4.text-dark Управление магазинами
