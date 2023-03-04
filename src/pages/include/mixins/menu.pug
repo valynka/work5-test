@@ -4,9 +4,9 @@ mixin createMenu(dataMenu)
       li 
         if item.active
           a.active(href="#")
-            img.icon(src= item.img)
+            img.icon(src= item.img, alt="menu icon")
             = item.title
         else 
           a(href="#")
-            img.icon(src= item.img)
+            img.icon(src= item.img, alt="menu icon")
             = item.title
