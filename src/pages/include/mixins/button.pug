@@ -1,9 +1,9 @@
 mixin button(path, title, className, id)
   if(id !== null)
     button.btn-custom(class= className, id= id)
-      img(src= path)
+      img(src= path, alt= title)
       span= title
   else
     button.btn-custom(class= className)
-      img(src= path)
+      img(src= path, alt= title)
       span= title
